@@ -4,8 +4,8 @@
 ROOT_DIR=$(pwd)
 VHOST='magento2.conf'
 DOMAIN='magento2.local'
-MAGENTO_COMPOSER_USER='public_key'
-MAGENTO_COMPOSER_PASS='private_key'
+MAGENTO_COMPOSER_USER='magento_public_key'
+MAGENTO_COMPOSER_PASS='magento_private_key'
 
 FIRSTNAME='Firstname'
 LASTNAME='Lastname'
@@ -108,11 +108,11 @@ finish() {
 	echo $GREEN 'Go to' http://$DOMAIN $ENDC
 }
 
-init &&
-setupComposer &&
-setupAcl &&
-setupMagento &&
-setupVhost &&
-setupNode &&
-setupTask &&
+init
+setupComposer
+setupAcl
+setupMagento
+setupVhost
+setupNode
+setupTask
 finish
